@@ -58,7 +58,7 @@ jobs:
         key : ${{ secrets.PRIVATE_KEY }}
         port : ${{ secrets.SSH_PORT }}
         script : |
-          sudo docker stop $(docker ps -a -q)
-          sudo docker rm $(docker ps -a pq)
+          sudo docker stop $(sudo docker ps -a -q)
+          sudo docker rm $(sudo docker ps -a pq)
           sudo docker pull jerneithe/dockertestimg
           sudo docker run -d -p 8080:8080 jerneithe/dockertestimg
