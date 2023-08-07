@@ -47,7 +47,7 @@ jobs:
       run : docker push jerneithe/dockertestimg
 
     - name : ec2 접속 및 애플리케이션 실행
-      uses : appleboy/ssh-action@0.1.6
+      uses : appleboy/ssh-action@v0.1.6
       with :
         host : ${{ secrets.WAS_HOST }}
         username : ${{ secrets.WAS_ID }}
